@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>格子图床-免费CDN图床图片上传</title>
+	<meta name="description" content="格子图床永久免费图床，即时预览，不限流量，不限外链数，永久保存，CDN图床，高速稳定,支持JPG, GIF, PNG等文件格式。">
+    <meta name="keywords" content="格子图床,图床API,免费图床,阿里图床,淘宝免费图床,图片库,网络相册">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Vidage/0.1.2/styles/Vidage.css" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/4.5.6/collection/icon/icon.css">
+    <link href="dist/mfb.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/fileinput.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="css/fileinput.min.js"></script>
+    <script type="text/javascript" src="css/fileinput_locale_zh.js"></script>
+    <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mdui.min.css">
+
+<!--[if IE]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.0/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body {
+	background-image: url(https://ae01.alicdn.com/kf/Hb3c35180bab549a7b113e2d59165c360l.jpg);
+}
+.STYLE1 {color: #FFFFFF}
+.STYLE2 {color: #CCCCCC}
+-->
+</style></head>
+<body>
+
+<script src="css/mdui.min.js"></script>
+     <div class="cs">
+       <h2>格子图床，免费好用的CDN图床</h2>
+       <h3>阿里巴巴图片外链服务，不限流量，无限外链，永久免费</h3>
+</div>
+   <form enctype="multipart/form-data" style="margin: 0 auto;width: 80%">
+    <div class="form-group">
+        <input id="smfile" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="1" data-max-file-count="100" name="image" accept="image/*">
+    </div>
+</form>
+<div id="showurl" style="display: none;margin: 0 auto;width: 80%">
+    <ul id="navTab" class="nav nav-tabs">
+        <li class="active"><a href="#htmlcodes" data-toggle="tab">HTML</a></li>
+        <li><a href="#urlcodes" data-toggle="tab">URL</a></li>
+        <li><a href="#bbcodes" data-toggle="tab">BBCode</a></li>
+        <li><a href="#markdowncodes" data-toggle="tab">Markdown</a></li>
+        <li><a href="#markdowncodes2" data-toggle="tab">Markdown with Link</a></li>
+    </ul>
+    <div id="navTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="htmlcodes">
+            <pre style="margin-top: 5px;"><code id="htmlcode" data-clipboard-text="2" onClick="copy(this)"></code></pre>
+        </div>
+        <div class="tab-pane fade" id="urlcodes">
+            <pre style="margin-top: 5px;"><code id="urlcode" data-clipboard-text="1" onClick="copy(this)"></code></pre>
+        </div>
+        <div class="tab-pane fade" id="bbcodes">
+            <pre style="margin-top: 5px;"><code id="bbcode" onClick="copy(this)"></code></pre>
+        </div>
+        <div class="tab-pane fade" id="markdowncodes">
+            <pre style="margin-top: 5px;"><code id="markdown" onClick="copy(this)"></code></pre>
+        </div>
+        <div class="tab-pane fade" id="markdowncodes2">
+            <pre style="margin-top: 5px;"><code id="markdownlinks" onClick="copy(this)"></code></pre>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="mdui-container">
+            <div align="center"><span class="STYLE1">Copyright &copy; 2020 All rights reserved. </span><a href="http://cn.gezia.top/" title="格子导航" class="STYLE2">格子导航</a><span class="STYLE1"> API by</span> <a href="http://image.ncbk.net/" target="_blank" class="STYLE2">NC图床</a> <span class="STYLE1">&amp;</span> <a href="https://image.kieng.cn/" target="_blank" class="STYLE2">KIENG图床</a><span class="STYLE1"> Inc.</span></a>        </div>
+        </div>
+    </footer>
+</head>
+<body class="mdui-theme-accent-indigo mdui-appbar-with-toolbar ">
+
+    <div class="mdui-appbar mdui-appbar-fixed">
+<div class="mdui-toolbar mdui-color-black">
+            <span mdui-drawer="{target: '#menu'}" class="mdui-btn mdui-btn-icon open-menu"><i
+                class="mdui-icon material-icons"><img style="width:100%;" src="https://ae01.alicdn.com/kf/H1d909e1a9949479f9270775a61b4c8836.png"></i></span>
+                <div class="mdui-toolbar-spacer"></div>                <a class="mdui-typo-headline">阿里图床</a></div>
+
+<div id="menu" class="mdui-drawer mdui-drawer-close">
+            <div class="mdui-list" mdui-collapse="{accordion: true}">
+                         <a class="mdui-list-item mdui-ripple" href="index.html">
+                <div class="mdui-list-item-content STYLE1">阿里图床</div>
+            </a>
+                         <a class="mdui-list-item mdui-ripple" href="sh.html">
+                <div class="mdui-list-item-content STYLE1">  搜狐图床</div>
+            </a>
+                         <a class="mdui-list-item mdui-ripple" href="hl.html">
+                <div class="mdui-list-item-content STYLE1">葫芦侠图床</div>
+            </a>
+                         <a class="mdui-list-item mdui-ripple" href="jd.html">
+                <div class="mdui-list-item-content STYLE1">京东图床</div>
+            </a>
+                         <a class="mdui-list-item mdui-ripple" href="tt.html">
+                <div class="mdui-list-item-content STYLE1">头条图床</div>
+            </a>
+                         <a class="mdui-list-item mdui-ripple" href="wy.html">
+                <div class="mdui-list-item-content STYLE1">网易图床</div>
+            </a>
+                         <a class="mdui-list-item mdui-ripple" href="qq.html">
+                <div class="mdui-list-item-content STYLE1">QQ图床</div>
+            </a></div>
+    </div>
+<script>
+    $("#smfile").fileinput({
+        uploadUrl: 'https://image.kieng.cn/upload.html?type=ali',
+        allowedFileExtensions : ['jpeg', 'jpg', 'png', 'gif', 'bmp'],
+        overwriteInitial: false,
+        maxFileSize: 5120,
+        maxFilesNum: 100,
+        maxFileCount: 20,
+    });
+    $('#smfile').on('fileuploaded', function(event, data, previewId, index) {
+        var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
+        if(response.code == '200') {
+            if ( $("showurl").css("display") ) {
+                $('#htmlcode').append("&lt;img src=\""+ response.data.url +"\" alt=\""+ files[index].name +"\" title=\""+ files[index].name +"\" /&gt;" + "\n");
+                $('#urlcode').append(response.data.url + "\n");
+                $('#bbcode').append("[img]"+ response.data.url +"[/img]" + "\n");
+                $('#markdown').append("!["+ files[index].name +"](" + response.data.url + ")" + "\n");
+                $('#markdownlinks').append("[!["+ files[index].name +"](" + response.data.url + ")]" +"(" + response.data.url + ")" + "\n");
+
+            } else if (response.data.url) {
+                $("#showurl").show();
+                $('#urlcode').append(response.data.url + "\n");
+                $('#htmlcode').append("&lt;img src=\""+ response.data.url +"\" alt=\""+ files[index].name +"\" title=\""+ files[index].name +"\" /&gt;" + "\n");
+                $('#bbcode').append("[img]"+ response.data.url +"[/img]" + "\n");
+                $('#markdown').append("!["+ files[index].name +"](" + response.data.url + ")" + "\n");
+                $('#markdownlinks').append("[!["+ files[index].name +"](" + response.data.url + ")]" +"(" + response.data.url + ")" + "\n");
+            }
+        }
+    });
+</script>
+  <p style="text-align:center;">
+</body>
+</html>
